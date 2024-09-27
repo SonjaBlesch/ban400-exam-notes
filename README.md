@@ -1,2 +1,3 @@
-# ban400-exam-notes
-Notes to be distributed with the BAN400 exam
+# Exam notes for the BAN400 exam
+
+This repository contains ...

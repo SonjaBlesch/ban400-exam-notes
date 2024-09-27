@@ -1,0 +1,23 @@
+
+### Plotting
+
+We use `ggplot2` as the standard package for plotting, and the main function is `ggplot`. We supply a data frame to the first argument and an aesthetic mapping to the second argument. We add *layers* of plotting components using the plus sign. A simple example:
+
+```{r}
+ggplot(df, aes(x = x_variable, y = y_variable, colour = grouping_variable)) +
+  geom_point()
+```
+
+Many types of layers may contain other data sets via the `data` argument and/or updated aesthetic mappings via the `mapping` argument. Data and mappings are typically inherited from the layer above if not specified in a new layer. There are many types of functions for making further adjustments to labels, titles, axes and other properties. A more complete example may look like this:
+
+```{r}
+ggplot(df, aes(x = x_variable, y = y_variable)) +
+  geom_point() +
+  geom_point(mapping = aes(x = new_x_variable, y = new_y_variable, colour = grouping_var),
+             data = new_df) +
+  xlab("X label") +
+  ylab("Y label") +
+  ggtitle("Title of plot") +
+  theme_minimal()
+```
+

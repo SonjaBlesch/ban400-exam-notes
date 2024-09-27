@@ -1,0 +1,63 @@
+---
+title: "Notes for the BAN400 Exam"
+format: 
+  pdf: 
+    mainfont: "JetBrainsMonoNL Nerd Font Propo"
+    sansfont: "JetBrainsMonoNL Nerd Font Propo"
+    fontsize: 9pt
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    geometry:
+      - top=10mm
+      - left=20mm
+      - right=20mm
+      - bottom=10mm
+      - heightrounded
+---
+
+## Functions
+
+```{r}
+#| results: "asis"
+#| message: false
+#| echo: false
+library(tidyverse)
+library(kableExtra)
+
+files <- paste0("functions/", dir("functions"))
+
+for(file in files) {
+  name <- 
+    file %>% 
+    basename() %>% 
+    tools::file_path_sans_ext() %>% 
+    sub("^[0-9]+-", "", .) %>% 
+    janitor::make_clean_names(case = "sentence")
+  
+  tab <- read_csv(file)
+  
+  cat(paste("###", name))
+  cat(tab %>%
+        rename("Function" = function_name,
+               "Package" = package,
+               "Description" = short_description) %>% 
+        arrange(Function) %>% 
+        kbl(booktabs = TRUE) %>% 
+        kable_styling(latex_options = c("hold_position"),
+                                  full_width = TRUE) %>% 
+        column_spec(3, width = "11 cm"))
+}
+```
+
+## Topics
+
+```{r}
+#| echo: false
+#| results: "asis"
+
+files <- paste0("topics/", dir("topics"))
+for(file in files){
+  cat(paste0("{{< include ", file, " >}} \n\n"))
+}
+```

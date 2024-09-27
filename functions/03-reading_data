@@ -1,0 +1,4 @@
+function_name, package, short_description
+read_delim(), readr, Read file with columns separated by any delimiter
+read_csv(), readr, Read csv-file (comma separated values)
+read_excel(), readxl, Read data from excel files

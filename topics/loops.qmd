@@ -1,0 +1,26 @@
+
+### Loops and iterations
+
+#### Standard for-loop
+
+```{r}
+for(i in 1:n) {
+  ... do something with i... 
+}
+```
+
+Note that we can iterate over any type of vector, not just numbers, and we can give the iteration variable any name we want. In the example above it is `i`.
+
+#### While loop
+
+Repeat until a certain condition is met. For example
+
+```{r}
+i <- 1
+while(i < 10) {
+  print(i)
+  i <- i + 1
+}
+```
+
+

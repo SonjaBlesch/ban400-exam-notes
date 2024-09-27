@@ -1,0 +1,3 @@
+function_name, package, short_description
+sqrt(), base, Calculates square root of number or vector of numbers
+abs(), base, Calculates absolute value of number or vector of numbers
