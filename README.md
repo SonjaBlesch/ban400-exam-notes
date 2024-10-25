@@ -44,5 +44,6 @@ This folder contains short descriptions and syntax of various coding structures 
 - A pull request should only contain changes/additions to the raw content files as described above. This means that you should *not* compile the document. This will be done after the changes have been accepted. 
 - Make sure that you have pulled the latest changes to the fork before opening your pull request and that there are no conflicts. 
 - In order to minimize the potential for conflicts, you should prioritize opening several smaller pull requests rather than one big.
+- **The note will be considered for possible attachment to the exam questions shortly after 01 December 2025. The note does not have to be particularly long for this to happen, but there must be a reasonably large coverage of the foundations of the curriculum in BAN400.**
 
 
