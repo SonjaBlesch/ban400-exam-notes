@@ -5,7 +5,7 @@ sd(), base, Calculates the standard deviation of a vector of numbers
 var(), base, Calculates the variance of a vector of numbers
 sum(), base, Calculates the variance of a vector of numbers
 c(), base, Creates vector
-length(), The number of elements in a vector or list
+length(), base, The number of elements in a vector or list
 ncol(), base, Number of columns of data frame or matrix
 nrow(), base, Number of rows of data frame of matrix
 min(), base, The smallest value in a set
