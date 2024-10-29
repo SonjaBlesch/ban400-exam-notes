@@ -1,0 +1,17 @@
+function_name, package, short_description
+head(), base, Returns the first few rows of a data frame, matrix, or vector
+filter(), dplyr, Returns elements that satisfy conditions
+select(), dplyr, Choose specific columns from a data frame
+arrange(), dplyr, Sorts rows of a data frame by specified columns
+sort(), base, Sorts a vector in ascending or descending order
+mutate(), dplyr, Adds or modifies columns in a data frame
+transmutate, dplyr, Creates a new data frame containing only the specified computations
+summarise(), dplyr, Summary statistics for columns in a data frame, typically used with grouped data
+group_by(), dplyr, Group data by one or more variables
+ungroup(), dplyr, Ungroup data such that subsequent operations to apply to the entire dataset
+left_join(), dplyr, Returns all values from the first data frame, with all columns and values from the second data frame where there is a match
+inner_join(), dplyr, Joins two data frames by keeping only records that match in both data sets
+right_join(), dplyr, Returns all values from the second data frame, with matching columns and values from the first data frame where there is a match
+full_join(), dplyr, Returns all values and columns from both data frames, filling in NA where there is no match
+semi_join(), dplyr, Filters the first data frame, keeping only rows with matching keys in the second data frame
+anti_join(), dplyr, Filters the first data frame to keep only rows with no match in the second data frame
