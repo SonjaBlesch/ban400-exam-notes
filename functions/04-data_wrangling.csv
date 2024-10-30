@@ -6,7 +6,7 @@ select(), dplyr, Choose specific columns from a data frame
 arrange(), dplyr, Sorts rows of a data frame by specified columns
 sort(), base, Sorts a vector in ascending or descending order
 mutate(), dplyr, Adds or modifies columns in a data frame
-transmutate, dplyr, Creates a new data frame containing only the specified computations
+transmutate(), dplyr, Creates a new data frame containing only the specified computations
 summarise(), dplyr, Summary statistics for columns in a data frame (typically used with grouped data)
 group_by(), dplyr, Group data by one or more variables
 ungroup(), dplyr, Ungroup data such that subsequent operations to apply to the entire dataset
