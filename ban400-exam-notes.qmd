@@ -42,7 +42,8 @@ for(file in files) {
         rename("Function" = function_name,
                "Package" = package,
                "Description" = short_description) %>% 
-        arrange(Function) %>% 
+        # Drop alphabetical sorting
+        # arrange(Function) %>% 
         kbl(booktabs = TRUE) %>% 
         kable_styling(latex_options = c("hold_position"),
                                   full_width = TRUE) %>% 

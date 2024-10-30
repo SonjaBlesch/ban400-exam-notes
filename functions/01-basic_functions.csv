@@ -3,10 +3,10 @@ mean(), base, Calculates the mean of a vector of numbers
 median(), base, Calculates the median of a vector of numbers
 sd(), base, Calculates the standard deviation of a vector of numbers
 var(), base, Calculates the variance of a vector of numbers
-sum(), base, Calculates the variance of a vector of numbers
+sum(), base, Calculates the sum of a vector of numbers
 c(), base, Creates vector
 length(), base, The number of elements in a vector or list
 ncol(), base, Number of columns of data frame or matrix
-nrow(), base, Number of rows of data frame of matrix
+nrow(), base, Number of rows of data frame or matrix
 min(), base, The smallest value in a set
 max(), base, The largest value in a set
