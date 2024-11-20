@@ -20,4 +20,22 @@ ggplot(df, aes(x = x_variable, y = y_variable)) +
   ggtitle("Title of plot") +
   theme_minimal()
 ```
+#### Statistics
 
+Most geoms come in pairs with complementary statistics arguments that are almost always used in concert. These functions can be used to retrieve the data that is used to generate the plot. For example, for these geoms:
+
+```{r}
+geom_smooth()
+geom_dotplot()
+geom_point()
+geom_bar()
+```
+We have these `stat` functions respectively:
+
+```{r}
+stat_smooth()
+stat_bindot()
+stat_qq()
+stat_count()
+```
+The corresponding stat functions can be found by reading the documentation with for example `?geom_smooth`.
