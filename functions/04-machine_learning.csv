@@ -1,0 +1,13 @@
+function_name, package, short_description
+logistic_reg(), tidymodels, Specifies a logistic regression model
+set_engine(), tidymodels, Specifies the computational engine for a model
+set_mode(), tidymodels, Sets the mode (e.g., classification or regression) for a model
+fit(), tidymodels, Fits the model to data
+nearest_neighbor(), tidymodels, Specifies a k-nearest neighbors model
+tune(), tidymodels, Marks a parameter for tuning in a model
+finalize_workflow(), tidymodels, Finalizes the workflow with specific parameters
+workflow(), tidymodels, Creates a workflow object
+add_model(), tidymodels, Adds a model to a workflow
+add_recipe(), tidymodels, Adds a recipe to a workflow
+tune_grid(), tidymodels, Tunes hyperparameters across a grid of values
+select_best(), tidymodels, Selects the best tuning parameter combination based on a metric
