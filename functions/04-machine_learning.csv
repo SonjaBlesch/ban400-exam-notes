@@ -1,7 +1,7 @@
 function_name, package, short_description
 logistic_reg(), tidymodels, Specifies a logistic regression model
 set_engine(), tidymodels, Specifies the computational engine for a model
-set_mode(), tidymodels, Sets the mode (e.g., classification or regression) for a model
+set_mode(), tidymodels, Sets the mode (e.g. classification or regression) for a model
 fit(), tidymodels, Fits the model to data
 nearest_neighbor(), tidymodels, Specifies a k-nearest neighbors model
 tune(), tidymodels, Marks a parameter for tuning in a model
