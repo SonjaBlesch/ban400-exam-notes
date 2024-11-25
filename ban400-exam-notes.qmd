@@ -47,7 +47,7 @@ for(file in files) {
         kbl(booktabs = TRUE) %>% 
         kable_styling(latex_options = c("hold_position"),
                                   full_width = TRUE) %>% 
-        column_spec(3, width = "11 cm"))
+        column_spec(3, width = "9 cm"))
 }
 ```
 
