@@ -1,0 +1,36 @@
+### Functions
+
+You can set default values like this:
+```{r}
+sim_norm<-function(N,mu=0,sigma=1)
+```
+This is preferred over hardcoding parameter values inside the function. 
+
+#### Rescale example function
+```{r}
+rescale01 <- function(x) {
+  rng <- range(x, na.rm = TRUE, finite = TRUE)
+  y <- (x - rng[1]) / (rng[2] - rng[1])
+  y[y == -Inf] <- 0
+  y[y == Inf] <- 1
+  y
+}
+```
+
+#### FizzBuzz example function
+
+```{r}
+fizzbuzz <- function(x) {
+  stopifnot(length(x) == 1)
+  stopifnot(is.numeric(x))
+  if (!(x %% 3) && !(x %% 5)) {
+    "fizzbuzz"
+  } else if (!(x %% 3)) {
+    "fizz"
+  } else if (!(x %% 5)) {
+    "buzz"
+  } else {
+    as.character(x)
+  }
+}
+```
