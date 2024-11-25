@@ -1,0 +1,63 @@
+### Filtering
+
+The symbol `|` works as an "or" operator, meaning it will return items that satisfy either one or both of the conditions before and after the operator.
+
+```{r}
+filter(flights, dest == "IAH" | dest == "HOU")
+```
+
+The `&` is an "and" operator, meaning both conditions need to hold. This is useful in conjunction with the `|`-operator, since otherwise you can simply just add filters after each other like this:
+
+```{r}
+filter(!is.na(flight2), !is.na(flight1))
+```
+
+Another operator `%in%` returns `TRUE` if an item exists inside a vector:
+
+```{r}
+flights %>% 
+  filter(dest %in% c("IAH", "HOU")
+```
+
+To create the opposite logic, i.e. "not in c()", you can use `!`:
+
+```{r}
+flights %>%
+  filter(!(dest %in% c("IAH", "HOU")))
+```
+
+### Selecting
+
+Some basic selection functions from `dplyr` are `starts_with`, `ends_with` and `contains`.
+
+```{r}
+select(flights, starts_with("dep_"), starts_with("arr_"))
+```
+
+#### Regex (regular expressions)
+
+The function `matches` uses *regular expressions*. These can be used to match precise patterns.
+
+```{r}
+select(flights, matches("^(dep|arr)_(time|delay)$"))
+```
+
+Some common Regex meta characters are:
+
+-   `.` Matches any character except newline.
+
+-   `^` Matches the beginning of a string.
+
+-   `$` Matches the end of a string.
+
+-   `[]` Matches any one of the characters inside the brackets.
+
+-   `|` Logical OR.
+
+-   `*` Matches 0 or more repetitions of the preceding character.
+
+-   `+` Matches 1 or more repetitions.
+
+-   `?` Matches 0 or 1 repetition (optional match).
+
+-   `{n,m}` Matches between n and m repetitions.
