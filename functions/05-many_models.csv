@@ -1,0 +1,13 @@
+function_name, package, short_description
+add_predictions(), modelr, Adds model predictions to a data frame
+add_residuals(), modelr, Adds residuals from a model to a data frame
+group_by(), dplyr, Groups data by one or more variables
+ungroup(), dplyr, Removes grouping structure from a data frame
+nest(), tidyr, Creates a nested data frame by collapsing rows into list-columns
+unnest(), tidyr, Expands list-columns back into regular columns
+select(),dplyr, Selects specific columns from a data frame
+pull(), dplyr, Extracts a single column as a vector
+pluck(), purrr, Extracts an element from a list or vector by index or name
+map(), purrr, Applies a function to each element of a list or vector
+map2(), purrr, Applies a function to pairs of elements from two lists
+glance(), broom, Generates a summary of model diagnostics in a tidy format
