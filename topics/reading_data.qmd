@@ -1,0 +1,74 @@
+### Reading data
+
+Sometimes data contains the delimiter. In that case, use quote argument to escape:
+
+```{r}
+read_csv("x,y\n1,'a,b'", quote="'")
+```
+
+### Parsing data
+
+There are various parsing functions from `readr` library, such as `parse_datetime`. These functions can be used to convert
+
+#### Dates and time
+
+Example of paring various formats using `parse_date` and `parse_time`:
+
+```{r}
+d1 <- "January 1, 2010"
+d2 <- "2015-Mar-07"
+d3 <- "06-Jun-2017"
+d4 <- c("August 19 (2015)", "July 1 (2015)")
+d5 <- "12/30/14" # Dec 30, 2014
+t1 <- "1705"
+t2 <- "11:15:10.12 PM"
+```
+
+Can be parsed respectively:
+
+```{r}
+parse_date(d1, "%B %d, %Y")   #> [1] "2010-01-01"
+parse_date(d2, "%Y-%b-%d")    #> [1] "2015-03-07"
+parse_date(d3, "%d-%b-%Y")    #> [1] "2017-06-06"
+parse_date(d4, "%B %d (%Y)")  #> [1] "2015-08-19" "2015-07-01"
+parse_date(d5, "%m/%d/%y")    #> [1] "2014-12-30"
+parse_time(t1, "%H%M")        #> 17:05:00
+```
+
+#### Pivoting
+
+The library `tidyr` provides various ways to pivot data. An example of a pivot is from
+
+```{r}
+preg <- tribble(
+  ~pregnant, ~male, ~female,
+  "yes", NA, 10,
+  "no", 20, 12
+)
+```
+
+To a longer data format:
+
+```{r}
+preg_tidy2 <- preg %>%
+  pivot_longer(c(male, female), names_to = "sex", values_to = "count", values_drop_na = TRUE)
+```
+
+#### Splitting columns
+
+You can split a column into multiple columns using `separate()` and `extract()` from `tidyr`:
+
+```{r}
+tibble(x = c("a,b,c", "d,e,f,g", "h,i,j")) %>% 
+  separate(x, c("one", "two", "three"))
+```
+
+In the above case, the second item has four "values" `"d,e,f,g"`. In this case, the `g` is dropped. There are various arguments in the functions to determine how to deal with extra or missing items like this.
+
+#### Basic find and replace
+
+You can perform a basic find-and-replace operation on a vector like this:
+
+```{r}
+y[y == “find”] <- “replace”
+```

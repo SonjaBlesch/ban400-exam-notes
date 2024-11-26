@@ -1,0 +1,17 @@
+function_name, package, short_description
+class(), base, Returns the class of an object
+typeof(), base, Determines the type or storage mode of any object
+mode(), base, Indicates the mode of storage
+as.numeric(), base, Converts data to numeric format
+as.character(), base, Converts data to character format
+as.factor(), base, Converts data to factor format
+gsub(), base, Find and replace
+reshape(), base, Reshape datasets between wide and long formats
+pivot_longer(), tidyr, Convert wide data to long format
+pivot_wider(), tidyr, Convert long data to wide format.
+na.omit(), base, Remove missing values
+is.na(), base, Check for missing values
+parse_date(), readr, Parse dates
+parse_time(), readr, Parse times
+parse_datetime(), readr, Parse datetimes
+separate(), tidyr, Split one column into multiple columns
