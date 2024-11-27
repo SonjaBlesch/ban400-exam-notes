@@ -1,3 +1,4 @@
+
 ### Loops and iterations
 
 #### Standard for-loop
@@ -9,16 +10,6 @@ for(i in 1:n) {
 ```
 
 Note that we can iterate over any type of vector, not just numbers, and we can give the iteration variable any name we want. In the example above it is `i`.
-
-A useful example of loops is the following used to read in multiple files into a single object:
-
-```{r}
-files <- dir("data/", pattern = "\\.csv$", full.names = TRUE)
-df_list <- vector("list", length(files))
-for (i in seq_along(files)) {
-  df_list[[i]] <- read_csv(files[[i]])
-}
-```
 
 #### While loop
 
@@ -32,8 +23,4 @@ while(i < 10) {
 }
 ```
 
-#### Alternatives
 
-The family of functions `map()` from library purrr can sometimes be used instead of loops. For example, to compute the mean of every column: `map_dbl(mtcars, mean)`.
-
-Similarly, `replicate()` from base R can be used to apply functions over lists and vectors.
