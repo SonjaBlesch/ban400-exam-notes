@@ -1,0 +1,10 @@
+function_name, package, short_description
+any_of(), dplyr, Selects columns that match any of the given names in a vector
+all_of(), dplyr, Selects columns that match all the given names in a vector
+starts_with(), dplyr, Selects columns whose names start with a specified prefix
+ends_with(), dplyr, Selects columns whose names end with a specified suffix
+contains(), dplyr, Selects columns whose names contain a specified string
+matches(), dplyr, Selects columns whose names match a specified regular expression
+select(), dplyr, Selects specified columns from a data frame
+slice_min(), dplyr, Selects rows with the smallest values of a variable
+slice_max(), dplyr, Selects rows with the largest values of a variable
