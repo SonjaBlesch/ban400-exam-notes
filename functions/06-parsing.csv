@@ -11,7 +11,7 @@ pivot_longer(), tidyr, Convert wide data to long format
 pivot_wider(), tidyr, Convert long data to wide format.
 na.omit(), base, Remove missing values
 is.na(), base, Check for missing values
-parse_date(), readr, Parse dates
-parse_time(), readr, Parse times
+ymd(), lubridate, Parse dates
+hms(), lubridate, Parse times
 parse_datetime(), readr, Parse datetimes
 separate(), tidyr, Split one column into multiple columns

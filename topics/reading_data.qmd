@@ -8,11 +8,11 @@ read_csv("x,y\n1,'a,b'", quote="'")
 
 ### Parsing data
 
-There are various parsing functions from `readr` library, such as `parse_datetime`. These functions can be used to convert
+There are various parsing functions from `lubdridate` library, such as `ymd()`. These functions can be used to convert objects into time and date formats. 
 
 #### Dates and time
 
-Example of paring various formats using `parse_date` and `parse_time`:
+Examples:
 
 ```{r}
 d1 <- "January 1, 2010"
@@ -27,12 +27,13 @@ t2 <- "11:15:10.12 PM"
 Can be parsed respectively:
 
 ```{r}
-parse_date(d1, "%B %d, %Y")   #> [1] "2010-01-01"
-parse_date(d2, "%Y-%b-%d")    #> [1] "2015-03-07"
-parse_date(d3, "%d-%b-%Y")    #> [1] "2017-06-06"
-parse_date(d4, "%B %d (%Y)")  #> [1] "2015-08-19" "2015-07-01"
-parse_date(d5, "%m/%d/%y")    #> [1] "2014-12-30"
-parse_time(t1, "%H%M")        #> 17:05:00
+mdy(d1)     #> [1] "2010-01-01"
+ymd(d2)     #> [1] "2015-03-07"
+dmy(d3)     #> [1] "2017-06-06"
+mdy(gsub("\\(", "", gsub("\\)", "", d4)))  #> [1] "2015-08-19" "2015-07-01"
+mdy(d5)     #> [1] "2014-12-30"
+hm(t1)      #> [1] "17:05:00"
+hms(t2)     #> [1] "23:15:10.12"
 ```
 
 #### Pivoting
