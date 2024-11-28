@@ -1,3 +1,9 @@
 function_name, package, short_description
 sqrt(), base, Calculates square root of number or vector of numbers
 abs(), base, Calculates absolute value of number or vector of numbers
+sign(), base, Returns the sign of x
+round(), base, Rounds x to n decimal places
+ceiling(), base, Rounds up to the nearest integer
+floor(), base, Rounds down to the nearest integer
+cumsum(), base, Cumulative sum
+cor(), base, Correlation

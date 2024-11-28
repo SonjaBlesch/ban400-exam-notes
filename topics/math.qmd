@@ -1,0 +1,13 @@
+### Math
+
+The Integer Division Operator `%/%` performs integer division. It divides two numbers and returns the whole number part of the quotient, discarding any remainder. Example:
+
+```{r}
+10 %/% 3  # Returns 3 (quotient without remainder)
+```
+
+The Modulo Operator `%%` operator returns the remainder from the division of two numbers. Example:
+
+```{r}
+10 %% 3  # Returns 1 (remainder)
+```
