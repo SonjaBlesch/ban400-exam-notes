@@ -1,8 +1,0 @@
-"function_name","package","short_description"
-"tic()","tictoc","Initialize time taking of a function"
-"toc()","tictoc","Stop time taking of a function"
-"detectCores()","doParallel","Detect cores in CPU"
-"makeCluster()","doParallel","Initialize cores"
-"registerDoParallel","doParallel","Register the cluster"
-"stopCluster()","doParallel","Close off clusters"
-"foreach() %dopar%","doParallel","Designate tasks for parallelization"
