@@ -20,6 +20,101 @@ ggplot(df, aes(x = x_variable, y = y_variable)) +
   ggtitle("Title of plot") +
   theme_minimal()
 ```
+#### Grouping
+
+You can visually group items in plots together using the `color` argument.
+
+```{r}
+ggplot(data = mpg, mapping = aes(x = displ, y = hwy, color=drv))
+```
+
+Grouping can also be used in calculations. For example, if you want to create several regression lines based on classification, you can group with `group` argument:
+
+```{r}
+geom_smooth(aes(group = drv)) # Creates separate regression lines. 
+```
+
+Sometimes need to group by several variables at the same time. You can use `unite()` to achieve this.
+
+```{r}
+whodata %>% 
+  unite(country_sex, country, sex, remove = FALSE) %>% 
+  ggplot()+
+  geom_line(aes(x=year,y=cases, group=country_sex, color=sex))
+```
+
+#### Stacking plots
+
+You can stack several plots on top of each other. If you stack plots of the same type , it may be useful to distinguish them using color. For example:
+
+```{r}
+ggplot(diamonds) +
+  geom_freqpoly(aes(x = x, color = "x"), binwidth = 0.1) +
+  geom_freqpoly(aes(x = y, color = "y"), binwidth = 0.1) 
+```
+
+#### One categorical and one continuous variable
+
+To explore the relationship between a continuous variable and one categorical variable, some plotting options are:
+
+-   `geom_violin`
+-   `geom_freqpoly` with `colour`-argument
+-   `geom_histogram` with`facet_wrap(vars())`
+-   If the data set is large, you may want to use `geom_lv` from the library `lvplot`.
+
+Example:
+
+```{r}
+ggplot(diamonds, aes(x=price,colour=cut))+
+  geom_freqpoly(bins=50)
+```
+
+#### Two categorical variables
+
+To explore the relationship between two categorical variables, `geom_tile` is often useful.
+
+```{r}
+diamonds %>% count(cut,color) %>% ggplot(aes(x=cut,y=color))+
+  geom_tile(aes(fill=n))
+```
+
+If you want to normalize proportions within a given categorical variable, here's an example of that:
+
+```{r}
+diamonds %>%
+  count(color, cut) %>% 
+  group_by(color) %>% 
+  mutate(
+    prop=n/sum(n)
+  ) %>% 
+  ggplot(aes(x=color,y=cut))+
+  geom_tile(aes(fill=prop))
+```
+
+#### Two continuous variables
+
+There are many options to explore the relationship between two categorical variables, such as:
+
+-   `geom_point`
+-   `geom_smooth`
+-   `geom_boxplot` where a continuous variable is divided into bins.
+
+```{r}
+ggplot(diamonds, aes(x = cut_width(price, 2000, boundary = 0), y = carat)) +
+  geom_boxplot(varwidth = TRUE)
+```
+
+**Tip**: choosing binned plots versus such as scatterplots depends on the nature of data analysis. For example, binned plots can "hide" outliers that are unusual combinations of x and y, but where x or y individually are not extreme values.
+
+#### Discrete variables
+
+A small tip about plotting discrete variables: If there is overplotting (e.g. multiple "dots" overlapping in dotplots; which happens often with discrete variables), then use jitter functions.
+
+```{r}
+ggplot(data, aes(x = category, y = value)) +
+  geom_jitter(width = 0.2, height = 0.1)
+```
+
 #### Statistics
 
 Most geoms come in pairs with complementary statistics arguments that are almost always used in concert. These functions can be used to retrieve the data that is used to generate the plot. For example, for these geoms:
