@@ -1,0 +1,8 @@
+"function_name","package","short_description"
+"distm()","geosphere","Calculate distance between 2 points"
+"st_as_sf()","sf","Converting data frame to geometric object"
+"geom_sf()","sf & ggplot2","Allows mapping of geometric objects"
+"st_crop()","sf","Cropping maps (x and y chords)"
+"st_layers()","sf","Check layers of files"
+"st_read()","sf","Read map data"
+"st_transform()","sf","Transform map projection"
