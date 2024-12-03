@@ -1,0 +1,13 @@
+### Creating own functions
+In R, we have the opportunity to create own functions. In order to do so, we
+have to stick to the following syntax.
+
+#### Basic syntax
+```{r}
+function_name <-
+  function(input1, input2, input3){
+    # In the following, function is defined/written
+    example = (input1 + input2) * input3
+    return(example) # Using return, we can exactly define function's return
+  }
+```
