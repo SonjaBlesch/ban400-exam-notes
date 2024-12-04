@@ -1,6 +1,6 @@
-### Loops and iterations
+## Loops and iterations
 
-#### Standard for-loop
+### Standard for-loop
 
 ```{r}
 for(i in 1:n) {
@@ -10,7 +10,7 @@ for(i in 1:n) {
 
 Note that we can iterate over any type of vector, not just numbers, and we can give the iteration variable any name we want. In the example above it is `i`.
 
-#### While loop
+### While loop
 
 Repeat until a certain condition is met. For example
 

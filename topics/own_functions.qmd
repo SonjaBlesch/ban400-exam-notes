@@ -1,8 +1,8 @@
-### Creating own functions
+## Creating own functions
 In R, we have the opportunity to create own functions. In order to do so, we
 have to stick to the following syntax.
 
-#### Basic syntax
+### Basic syntax
 ```{r}
 function_name <-
   function(input1, input2, input3){
@@ -12,10 +12,9 @@ function_name <-
   }
 ```
 
-#### Anonymous functions
+### Anonymous functions
 We can also create functions for one use only.
 
-#### Syntax Anonymous Functions
 ```{r}
 {\(x) content of the function}
 #x is the parameter variable here

@@ -1,6 +1,6 @@
-### Empty vectors (and tibbles) for further use
+## Empty vectors (and tibbles) for further use
 
-To set up an empty vector, one can for instance use the following chunk of code. While doing so, the seq-function may be useful. NA_integer\_ serves as some kind of "placeholder" for figures/outcomes of formulas calculated later on.
+To set up an empty vector, one can for instance use the following chunk of code. While doing so, the seq-function may be useful. `NA_integer_` serves as some kind of "placeholder" for figures/outcomes of formulas calculated later on.
 
 ```{r}
 vector <-

@@ -1,4 +1,4 @@
-### Reading data
+## Reading data
 
 Sometimes data contains the delimiter. In that case, use quote argument to escape:
 
@@ -6,11 +6,11 @@ Sometimes data contains the delimiter. In that case, use quote argument to escap
 read_csv("x,y\n1,'a,b'", quote="'")
 ```
 
-### Parsing data
+## Parsing data
 
 There are various parsing functions from `lubdridate` library, such as `ymd()`. These functions can be used to convert objects into time and date formats. 
 
-#### Dates and time
+### Dates and time
 
 Examples:
 
@@ -36,7 +36,7 @@ hm(t1)      #> [1] "17:05:00"
 hms(t2)     #> [1] "23:15:10.12"
 ```
 
-#### Pivoting
+### Pivoting
 
 The library `tidyr` provides various ways to pivot data. An example of a pivot is from
 
@@ -55,7 +55,7 @@ preg_tidy2 <- preg %>%
   pivot_longer(c(male, female), names_to = "sex", values_to = "count", values_drop_na = TRUE)
 ```
 
-#### Splitting columns
+### Splitting columns
 
 You can split a column into multiple columns using `separate()` and `extract()` from `tidyr`:
 
@@ -66,7 +66,7 @@ tibble(x = c("a,b,c", "d,e,f,g", "h,i,j")) %>%
 
 In the above case, the second item has four "values" `"d,e,f,g"`. In this case, the `g` is dropped. There are various arguments in the functions to determine how to deal with extra or missing items like this.
 
-#### Basic find and replace
+### Basic find and replace
 
 You can perform a basic find-and-replace operation on a vector like this:
 

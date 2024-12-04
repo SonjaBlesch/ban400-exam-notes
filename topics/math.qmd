@@ -1,4 +1,4 @@
-### Math
+## Math
 
 The Integer Division Operator `%/%` performs integer division. It divides two numbers and returns the whole number part of the quotient, discarding any remainder. Example:
 

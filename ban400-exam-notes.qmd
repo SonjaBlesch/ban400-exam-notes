@@ -16,7 +16,7 @@ format:
       - heightrounded
 ---
 
-## Functions
+# Functions
 
 ```{r}
 #| results: "asis"
@@ -37,7 +37,7 @@ for(file in files) {
   
   tab <- read_csv(file)
   
-  cat(paste("###", name))
+  cat(paste("##", name))
   cat(tab %>%
         rename("Function" = function_name,
                "Package" = package,
@@ -51,7 +51,7 @@ for(file in files) {
 }
 ```
 
-## Topics
+# Topics
 
 ```{r}
 #| echo: false

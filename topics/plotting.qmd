@@ -1,5 +1,5 @@
 
-### Plotting
+## Plotting
 
 We use `ggplot2` as the standard package for plotting, and the main function is `ggplot`. We supply a data frame to the first argument and an aesthetic mapping to the second argument. We add *layers* of plotting components using the plus sign. A simple example:
 
@@ -20,7 +20,7 @@ ggplot(df, aes(x = x_variable, y = y_variable)) +
   ggtitle("Title of plot") +
   theme_minimal()
 ```
-#### Grouping
+### Grouping
 
 You can visually group items in plots together using the `color` argument.
 
@@ -43,7 +43,7 @@ whodata %>%
   geom_line(aes(x=year,y=cases, group=country_sex, color=sex))
 ```
 
-#### Stacking plots
+### Stacking plots
 
 You can stack several plots on top of each other. If you stack plots of the same type , it may be useful to distinguish them using color. For example:
 
@@ -53,7 +53,7 @@ ggplot(diamonds) +
   geom_freqpoly(aes(x = y, color = "y"), binwidth = 0.1) 
 ```
 
-#### One categorical and one continuous variable
+### One categorical and one continuous variable
 
 To explore the relationship between a continuous variable and one categorical variable, some plotting options are:
 
@@ -69,7 +69,7 @@ ggplot(diamonds, aes(x=price,colour=cut))+
   geom_freqpoly(bins=50)
 ```
 
-#### Two categorical variables
+### Two categorical variables
 
 To explore the relationship between two categorical variables, `geom_tile` is often useful.
 
@@ -91,7 +91,7 @@ diamonds %>%
   geom_tile(aes(fill=prop))
 ```
 
-#### Two continuous variables
+### Two continuous variables
 
 There are many options to explore the relationship between two categorical variables, such as:
 
@@ -106,7 +106,7 @@ ggplot(diamonds, aes(x = cut_width(price, 2000, boundary = 0), y = carat)) +
 
 **Tip**: choosing binned plots versus such as scatterplots depends on the nature of data analysis. For example, binned plots can "hide" outliers that are unusual combinations of x and y, but where x or y individually are not extreme values.
 
-#### Discrete variables
+### Discrete variables
 
 A small tip about plotting discrete variables: If there is overplotting (e.g. multiple "dots" overlapping in dotplots; which happens often with discrete variables), then use jitter functions.
 
@@ -115,7 +115,7 @@ ggplot(data, aes(x = category, y = value)) +
   geom_jitter(width = 0.2, height = 0.1)
 ```
 
-#### Statistics
+### Statistics
 
 Most geoms come in pairs with complementary statistics arguments that are almost always used in concert. These functions can be used to retrieve the data that is used to generate the plot. For example, for these geoms:
 
