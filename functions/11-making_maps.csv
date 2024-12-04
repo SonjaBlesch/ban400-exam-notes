@@ -5,7 +5,7 @@ geom_sf(),sf & ggplot2,Allows mapping of geometric objects
 st_crop(),sf,Cropping maps (x and y chords)
 st_layers(),sf,Check layers of files
 st_read(),sf,Read map data
-st_transform(),sf,Transform map projection
+st_transform(),sf,Transform map projection (we used crs = 4326)
 st_cast(), sf, cast geometry to another type
 ne_countries(), rnaturalearth, getting data for the map
 auto_merge(), countries, easy merging for country data (especially different spelling of same name)
