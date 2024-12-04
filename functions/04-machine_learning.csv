@@ -11,3 +11,9 @@ add_model(), tidymodels, Adds a model to a workflow
 add_recipe(), tidymodels, Adds a recipe to a workflow
 tune_grid(), tidymodels, Tunes hyperparameters across a grid of values
 select_best(), tidymodels, Selects the best tuning parameter combination based on a metric
+predict(), stats, predicts outcome variable according to a specified model-e.g Predict.lm- predict.glm, É
+initial_split(), rsample,  splits dataset in test and training and test data
+vfold_cv(), rsample, randomly splits data into different folds (for cross validation)
+recipe(), recipes, creates a recipe for processing data
+grid_space_filling(), dials, for making a search grid
+roc_auc(), yardstick, calculated the area under the AUC curve
