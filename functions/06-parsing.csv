@@ -4,6 +4,7 @@ typeof(), base, Determines the type or storage mode of any object
 mode(), base, Indicates the mode of storage
 as.numeric(), base, Converts data to numeric format
 as.character(), base, Converts data to character format
+as.logical(), base, Converts data to a logical format (TRUE or FALSE)
 as.factor(), base, Converts data to factor format
 gsub(), base, Find and replace
 reshape(), base, Reshape datasets between wide and long formats

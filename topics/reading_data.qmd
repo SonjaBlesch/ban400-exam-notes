@@ -6,6 +6,33 @@ Sometimes data contains the delimiter. In that case, use quote argument to escap
 read_csv("x,y\n1,'a,b'", quote="'")
 ```
 
+### Reading multiple files
+
+Instead of reading in every single file on its own, you can list all the files in a directory,
+read each of them into a list and combine them into a data frame:
+
+```{r}
+paths <- list.files(path = "your_files", pattern = "*.csv")
+
+list_of_data <- map(paths, read_csv)
+
+single_df <- list_rbind(list_of_data)
+```
+
+### Reading data from the files names
+
+When information is given in the name of the file itself, we can extract it using
+the set_names function:
+
+```{r}
+paths <- list.files(path = "your_files", pattern = "*.csv")
+
+paths %>% 
+  set_names(basename) %>% 
+  map(read_csv)
+  
+```
+
 ### Parsing data
 
 There are various parsing functions from `lubdridate` library, such as `ymd()`. These functions can be used to convert objects into time and date formats. 

@@ -10,3 +10,6 @@ ncol(), base, Number of columns of data frame or matrix
 nrow(), base, Number of rows of data frame or matrix
 min(), base, The smallest value in a set
 max(), base, The largest value in a set
+seq(), base, Create an individual sequence 
+rep(), base, Repeat a vector or elements of a vector
+vector(), base, Creates an empty vector

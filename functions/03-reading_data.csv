@@ -6,3 +6,5 @@ read_excel(), readxl, Read data from excel files
 read_fwf(), readr, Reads fixed width data
 read_tsv(), readr, Reads tab separated values
 readLines, base, Read some or all text lines from a connection
+list.files(), base, lists files in a directory
+list_rbind(), purrr, combines data from a list into a single data frame
