@@ -11,3 +11,15 @@ function_name <-
     return(example) # Using return, we can exactly define function's return
   }
 ```
+
+#### Anonymous functions
+We can also create functions for one use only.
+
+#### Syntax Anonymous Functions
+```{r}
+{\(x) content of the function}
+#x is the parameter variable here
+#an example for an anonymous function:
+{\(x) x^3}
+#don't forget the brackets () when you use it in a pipe
+```
