@@ -1,0 +1,51 @@
+---
+title: "regression"
+format: html
+editor: visual
+---
+
+### Regression
+
+#### linear regression
+
+```{r}
+linear_model <- lm(score ~ STR, data = df)
+```
+
+#### nonlinear regression with polynomials
+
+```{r}
+#degree determines degree of polynom (degree = 2 for quadratic model)
+cubic_model <- lm(score ~ poly(income, degree = 3, raw = TRUE), data = df)
+
+
+#Alternative:
+#use the I and define all the terms you want in the regression
+quadratic_model <- lm(score ~ income + I(income^2), data = df)
+```
+
+#### Interaction terms
+
+```{r}
+model_interaction <- lm(score ~ size + HiEL + size * HiEL, data = df)
+```
+
+#### Dealing with regression Output
+
+```{r}
+model: some regression model
+
+#simplest way to get regression results
+summary(model) 
+#regression output with stargazer package
+stargazer(model, type = "text")
+#using the jtools package
+summ(model)
+#another function of the jtools package
+plot_summs(model)
+#adding the distributions
+plot_summs(model, plot.distributions = TRUE)
+#turn an object into a tidy tibble
+tidy(model)
+
+```
