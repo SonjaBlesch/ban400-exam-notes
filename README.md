@@ -1,5 +1,8 @@
 # Exam notes for the BAN400 exam
 
+---
+**This repository has now been closed for new pull requests. The resulting PDF will be added as an attachment to the exam questions in BAN400 in the fall semester of 2024.**
+
 This repository contains notes that, under certain conditions, will be made available on the BAN400 exam. The document will be updated via pull requests from the students. Please read the instructions below carefully before submitting changes. Pull requests that do not follow the standards set out in this document will be rejected.
 
 If the contributions encompass a substantial amount of the course by **1 December 2024**, the file `ban400-exam-notes.pdf` will be handed out as attachment to the exam.
