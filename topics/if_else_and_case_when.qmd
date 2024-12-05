@@ -1,0 +1,22 @@
+## If-Else and case_when
+
+### Basic syntax of an if-else statement
+
+In the following, you can see the basic syntax of an if-else statement
+```{r}
+if (condition) {
+# What should happen in case condition is TRUE?
+} else {
+  # What should happen in any other case?
+}
+```
+
+### Applying an if-else statement within a data frame
+If we want to apply an if-else statement to a specific column of a data frame, there are several ways to do so. Two possible ways are either to use the aforementioned syntax in combination with a for-loop or make use of the case_when function. The syntax is as following:
+```{r}
+case_when(
+  column1 == "Norway" ~ "Norway",
+  !column1 == "Norway" ~ "Rest of the world"
+)
+```
+It depends on the given case what way is more convenient to use.

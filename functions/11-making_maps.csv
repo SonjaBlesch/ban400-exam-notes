@@ -1,8 +1,13 @@
-"function_name","package","short_description"
-"distm()","geosphere","Calculate distance between 2 points"
-"st_as_sf()","sf","Converting data frame to geometric object"
-"geom_sf()","sf & ggplot2","Allows mapping of geometric objects"
-"st_crop()","sf","Cropping maps (x and y chords)"
-"st_layers()","sf","Check layers of files"
-"st_read()","sf","Read map data"
-"st_transform()","sf","Transform map projection"
+function_name,package,short_description
+distm(),geosphere,Calculate distance between 2 points
+st_as_sf(),sf,Converting data frame to geometric object
+geom_sf(),sf & ggplot2,Allows mapping of geometric objects
+st_crop(),sf,Cropping maps (x and y chords)
+st_layers(),sf,Check layers of files
+st_read(),sf,Read map data
+st_transform(),sf,Transform map projection (we used crs = 4326)
+st_cast(), sf, cast geometry to another type
+ne_countries(), rnaturalearth, getting data for the map
+auto_merge(), countries, easy merging for country data (especially different spelling of same name)
+st_intersection(), sf, set operations with geometry collections
+coord_sf(), ggplot2, just display the area we want

@@ -1,4 +1,4 @@
-### Filtering
+## Filtering
 
 The symbol `|` works as an "or" operator, meaning it will return items that satisfy either one or both of the conditions before and after the operator.
 
@@ -26,7 +26,7 @@ flights %>%
   filter(!(dest %in% c("IAH", "HOU")))
 ```
 
-### Selecting
+## Selecting
 
 Some basic selection functions from `dplyr` are `starts_with`, `ends_with` and `contains`.
 
@@ -34,7 +34,7 @@ Some basic selection functions from `dplyr` are `starts_with`, `ends_with` and `
 select(flights, starts_with("dep_"), starts_with("arr_"))
 ```
 
-#### Regex (regular expressions)
+### Regex (regular expressions)
 
 The function `matches` uses *regular expressions*. These can be used to match precise patterns.
 

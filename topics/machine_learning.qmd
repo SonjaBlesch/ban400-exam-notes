@@ -1,0 +1,16 @@
+## Machine Learning
+
+### Basic structure
+
+We dealt with Machine learning. Here are the basic steps you have to do. Steps are for the process of cross validation.
+
+1.  Get train & testdata
+2.  Make folds
+3.  Define model and recipe
+4.  Set up workflow
+5.  Search grid
+6.  Get cross validation AUC
+7.  Determine "optimal" tune parameters and put them in the workflow
+8.  Fit the model
+9.  Predict test data
+10. Calculate overall AUC
