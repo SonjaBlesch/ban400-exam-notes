@@ -1,18 +1,13 @@
----
-title: "regression"
-format: html
-editor: visual
----
 
-### Regression
+## Regression
 
-#### linear regression
+### linear regression
 
 ```{r}
 linear_model <- lm(score ~ STR, data = df)
 ```
 
-#### nonlinear regression with polynomials
+### nonlinear regression with polynomials
 
 ```{r}
 #degree determines degree of polynom (degree = 2 for quadratic model)
@@ -24,13 +19,13 @@ cubic_model <- lm(score ~ poly(income, degree = 3, raw = TRUE), data = df)
 quadratic_model <- lm(score ~ income + I(income^2), data = df)
 ```
 
-#### Interaction terms
+### Interaction terms
 
 ```{r}
 model_interaction <- lm(score ~ size + HiEL + size * HiEL, data = df)
 ```
 
-#### Dealing with regression Output
+### Dealing with regression Output
 
 ```{r}
 model: some regression model

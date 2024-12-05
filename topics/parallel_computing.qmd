@@ -1,14 +1,9 @@
----
-title: "Parallel_Computing"
-format: html
-editor: visual
----
 
-### Parallel Computing
+## Parallel Computing
 
 Here are some general steps for parallel computing:
 
-#### DoParallel:
+### DoParallel:
 
 1.  Determine number of cores
 2.  Instantiate cores
@@ -18,7 +13,7 @@ Here are some general steps for parallel computing:
 6.  Close the clusters
 7.  Stop timer
 
-#### Furrr
+### Furrr
 
 1.  Use a map function to write the for loop
 2.  Specify how many workers to use
@@ -26,7 +21,7 @@ Here are some general steps for parallel computing:
 4.  Use the sample loop as with the map-function but replace the map-function with the equivalent future_map-function (e.g. map2_dbl() –\> future_map2_dbl())
 5.  Stop the timer
 
-#### Syntax for foreach:
+### Syntax for foreach:
 
 ```{r}
 #a normal for loop:
@@ -35,9 +30,9 @@ for (i in 1:nrow(df)) {
 }
 
 #Foreach loop:
-foreach (i = 1:nrow(df))
-%dopar% 
+foreach (i = 1:nrow(df)) %dopar% {
   some calculations
+}
 
 #Good idea to specify how to combine results and which packages should be available to the foreach loop
 

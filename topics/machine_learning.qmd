@@ -1,12 +1,6 @@
----
-title: "Machine_Learning"
-format: html
-editor: visual
----
+## Machine Learning
 
-### Machine Learning
-
-#### Basic structure
+### Basic structure
 
 We dealt with Machine learning. Here are the basic steps you have to do. Steps are for the process of cross validation.
 
